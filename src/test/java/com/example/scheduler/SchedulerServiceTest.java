@@ -27,14 +27,14 @@ public class SchedulerServiceTest {
 
     @Test
     public void testFileExists() {
-        File file = new File("src/main/resources/schedule.csv");
+        File file = new File("src/main/resources/csv/schedule.csv");
         assertTrue(file.exists() && file.isFile() && file.canRead());
     }
 
     @Test
     public void testFileDataFormat() {
         try {
-            BufferedReader csvReader = new BufferedReader(new FileReader("src/main/resources/schedule.csv"));
+            BufferedReader csvReader = new BufferedReader(new FileReader("src/main/resources/csv/schedule.csv"));
             String row;
             int lineCounter = 0;
             while ((row = csvReader.readLine()) != null) {

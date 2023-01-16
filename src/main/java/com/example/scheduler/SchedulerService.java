@@ -19,7 +19,7 @@ public class SchedulerService {
     @Scheduled(fixedRate = 60000)
     public void executeAction() throws IOException {
         try {
-            BufferedReader csvReader = new BufferedReader(new FileReader("src/main/resources/schedule.csv"));
+            BufferedReader csvReader = new BufferedReader(new FileReader("src/main/resources/csv/schedule.csv"));
             csvReader.readLine();
             String row;
             while ((row = csvReader.readLine()) != null) {
